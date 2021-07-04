@@ -19,6 +19,12 @@
   ],
   "comments": [],
   "profile": {
-    "name": "typicode"
+    "id": 0,
+    "email": "mani12345rathnam@gmail.com",
+    "fisrtName": "Mani Rathnam",
+    "lastName": "R",
+    "password": "",
+    "address": "#16 Sri Pravathi nilaya",
+    "birthdate": "10/12/1212"
   }
 }

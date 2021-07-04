@@ -43,7 +43,7 @@ export class ApiService {
 
    registernow(data : any){
      console.log("api called");
-    return this.http.post<any>(`${baseUrl}posts/`, data)
+    return this.http.post<any>(`${baseUrl}profile/`, data)
     .pipe(map((res:any)=>{
       return res;
 
