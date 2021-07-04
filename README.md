@@ -18,13 +18,19 @@ npm audit fix
 
 # Start JSON Server
 
-Install JSON Server
+`Install JSON Server`
 
-npm install -g json-server
+`npm install -g json-server`
 
 json-server --watch db.json
 
 Now if you go to http://localhost:3000/posts/1, you'll get
+
+ # Application Flow
+ 
+ 1) Register
+ 2) Login
+ 3) Employees Details
 
 
 
