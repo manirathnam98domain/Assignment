@@ -1,21 +1,12 @@
 # Assignmentproject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1        
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 # Getting started
-Install JSON Server
-
-npm install -g json-server
-
-# Start JSON Server
-
-json-server --watch db.json
-
-Now if you go to http://localhost:3000/posts/1, you'll get
 
 # Install
  npm install
@@ -24,6 +15,18 @@ Now if you go to http://localhost:3000/posts/1, you'll get
 Might need to run
 
 npm audit fix
+
+# Start JSON Server
+
+Install JSON Server
+
+npm install -g json-server
+
+json-server --watch db.json
+
+Now if you go to http://localhost:3000/posts/1, you'll get
+
+
 
 Angular CLI: 12.1.1        
 Node: 14.16.1
