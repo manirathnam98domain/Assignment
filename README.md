@@ -15,13 +15,19 @@ npm install -g json-server
 
 json-server --watch db.json
 
+Now if you go to http://localhost:3000/posts/1, you'll get
+
 # Install
  npm install
- ng serve or 
+ ng serve  
 
 Might need to run
 
 npm audit fix
+
+Angular CLI: 12.1.1        
+Node: 14.16.1
+
  
  
 ## Running unit tests
