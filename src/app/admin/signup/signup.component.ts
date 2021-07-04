@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {Router} from '@angular/router';
 import { ApiService} from '../../shared/api.service';
 import {Signup} from './signup.model';
+ 
 
 
 
@@ -14,6 +15,7 @@ import {Signup} from './signup.model';
 })
 export class SignupComponent implements OnInit {
 
+  
 
   successMessage:string =""
 
@@ -47,6 +49,7 @@ export class SignupComponent implements OnInit {
     this.signups.email      = this.regForm.value.email;
     this.signups.fisrtName  = this.regForm.value.fisrtName;
     this.signups.lastName   = this.regForm.value.lastName;
+    this.signups.password   = this.regForm.value.password;
     this.signups.address    = this.regForm.value.address;
     this.signups.birthdate  = this.regForm.value.birthdate;
     this.signups.city       =  this.regForm.value.city;
