@@ -32,11 +32,6 @@ Now if you go to http://localhost:3000/posts/1, you'll get
  2) Login
  3) Employees Details
 
-
-
-Angular CLI: 12.1.1        
-Node: 14.16.1
-
  
 ## Running end-to-end tests
 
