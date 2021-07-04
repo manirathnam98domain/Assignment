@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 33,
+      "fisrtName": "Ramu",
+      "lastName": "Raju",
+      "address": "Bangalore karnataka",
+      "birthdate": "30/01/2000",
+      "city": "Bangalore "
+    },
+    {
+      "id": 36,
+      "fisrtName": "Mani",
+      "lastName": "R",
+      "address": "Banagalore",
+      "birthdate": "12/12/1998",
+      "city": "bnagalore"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

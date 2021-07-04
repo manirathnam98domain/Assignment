@@ -1,0 +1,46 @@
+<button class="btn btn-success"  type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Add Employee</button>
+
+
+
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Employee Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form >
+          <div class="mb-3" class="form-group">
+            <label for="exampleInputEmail1" class="form-label">Fisrt Name</label>
+            <input type="text" formControlName="fisrtName" class="form-control" id="exampleInputEmail1"  >
+             </div>
+          <div class="mb-3">
+            <label for="exampleInputpassword1" class="form-label">Last Name</label>
+            <input type="text" formControlName="lastName" class="form-control" id="exampleInputEmail1" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputpassword1" class="form-label">Email</label>
+            <input type="text"  formControlName="address" class="form-control" id="exampleInputEmail1" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputpassword1" class="form-label">Birth date</label>
+            <input type="text" formControlName="birthdate" class="form-control" id="exampleInputEmail1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputpassword1" class="form-label">City</label>
+            <input type="text" formControlName="city" class="form-control" id="exampleInputEmail1">
+          </div>
+         </form>
+          <div class="modal-footer">
+           <button type="button"  id="cancel"  class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+           <button type="button"   class="btn btn-primary">Add</button>
+           <button type="button"    class="btn btn-primary">Update</button>
+
+         </div>
+       </div>
+    </div>
+  </div>
+</div>
