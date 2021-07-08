@@ -1,20 +1,20 @@
 {
   "posts": [
     {
-      "id": 33,
-      "fisrtName": "Ramu",
-      "lastName": "Raju",
-      "address": "Bangalore karnataka",
-      "birthdate": "30/01/2000",
-      "city": "Bangalore "
-    },
-    {
       "id": 36,
       "fisrtName": "Mani",
       "lastName": "R",
-      "address": "Banagalore",
-      "birthdate": "12/12/1998",
-      "city": "bnagalore"
+      "address": "Bangalore",
+      "birthdate": "08/12/1998",
+      "city": "Bangalore, Ka"
+    },
+    {
+      "id": 37,
+      "fisrtName": "Mani ",
+      "lastName": "R",
+      "address": "Sri, Pravathi Nilaya Kalkere",
+      "birthdate": "08/30/1998",
+      "city": "Banaglore"
     }
   ],
   "comments": [],
@@ -23,8 +23,8 @@
     "email": "mani12345rathnam@gmail.com",
     "fisrtName": "Mani Rathnam",
     "lastName": "R",
-    "password": "12asdfg121",
-    "address": " 16Sri Pravathi nilaya",
-    "birthdate": "12/20/1998"
+    "password": "12323asa",
+    "address": "#16 Sri Pravathi nilaya",
+    "birthdate": "02/12/1998"
   }
 }

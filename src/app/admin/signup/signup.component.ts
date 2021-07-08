@@ -1,10 +1,12 @@
- 
+
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {Router} from '@angular/router';
-import { ApiService} from '../../shared/api.service';
+import { ApiService, TokenPayload} from '../../shared/api.service';
 import {Signup} from './signup.model';
- 
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+
 
 
 
@@ -15,16 +17,43 @@ import {Signup} from './signup.model';
 })
 export class SignupComponent implements OnInit {
 
-  
+
 
   successMessage:string =""
 
-  regForm!:FormGroup 
-  
+  regForm!:FormGroup
 
   signups : Signup = new Signup()
+  email: any
+  fisrtName: any
+  lastName: any
+  password: any
+  address: any
+  birthdate: any
 
-  constructor(private fb: FormBuilder, private router :Router, private api : ApiService) { }
+  
+
+  credentials: TokenPayload = {
+    email: '',
+    password: ''
+  };
+   
+
+  //  postdata = {
+     
+  //    email:"maaa.com",
+  //       fisrtname: "mani",
+  //       lastname:"R",
+  //       address: "kalkere",
+  //       birthdate:"30/12/1998",
+  //       password:"12345",
+      
+
+  
+  // }; 
+   
+
+  constructor(private fb: FormBuilder, private router :Router, private api : ApiService,private http : HttpClient,) { }
 
   ngOnInit(): void {
     this.regForm = this.fb.group({
@@ -37,15 +66,15 @@ export class SignupComponent implements OnInit {
     })
   }
 
-  register(){
-    this.successMessage = "Successfully Registered..."
-     console.log(this.regForm)
-     console.log(this.successMessage);
-     this.router.navigateByUrl("/admin/login");
-  }
+  // register(){
+  //   this.successMessage = "Successfully Registered..."
+  //    console.log(this.regForm)
+  //    console.log(this.successMessage);
+  //    this.router.navigateByUrl("/admin/login");
+  // }
 
   //  to post the new value in json server
-  regEmployedetails(){
+  register(){
     this.signups.email      = this.regForm.value.email;
     this.signups.fisrtName  = this.regForm.value.fisrtName;
     this.signups.lastName   = this.regForm.value.lastName;
@@ -57,11 +86,12 @@ export class SignupComponent implements OnInit {
     this.api.registernow(this.signups)
      .subscribe(res=> {
        console.log(res);
-    alert("Employee Added Successfully");
+    alert("Register  Successfully");
           let ref = document.getElementById('cancel')
           ref?.click();
     this.regForm.reset();
-     
+    this.router.navigateByUrl("admin/login");
+
   },
     err=> {
       console.log(this.err)
@@ -74,5 +104,24 @@ throw new Error('Something Went Wrong');
 }
 
 
+// register(){
+
+//   let resource = JSON.stringify(this.regForm.value );
+//   console.log(resource);
+
+  
+
+
+//   this.api.registernow(this.postdata)
+//   .subscribe( data =>{
+//     console.log(data)
+
+//   })
+// }
+
 
 }
+
+
+
+

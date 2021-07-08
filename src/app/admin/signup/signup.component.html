@@ -13,7 +13,7 @@
                   <br>Invalid Email Address
               </span>
           </div>
-             
+
               <div class="form-group">
                   <label for="name" class="fa fa-user"></label>
                   <input type="text" class="form-control" placeholder="Enter Your Name" formControlName="fisrtName">
@@ -48,13 +48,13 @@
 
           <div class="form-group">
             <label for="birthdate" class="fa fa-user"></label>
-            <input type="text"class="form-control" placeholder="Birth ex:MM/DD/YYYY" formControlName="birthdate">
+            <input type="text"class="form-control" placeholder="Birth ex:MM/DD/YYYY" formControlName="birthdate" >
             <span class="text-danger" *ngIf="regForm.controls.birthdate.errors && regForm.controls.birthdate.touched">
                 <br>Date of Birth is Required
             </span>
         </div>
               <div class="text-center">
-                  <button id="submitButton" class="btn btn-primary"  type="submit" (click)="regEmployedetails()" [disabled]="!regForm.valid" >
+                  <button id="submitButton" class="btn btn-primary"  type="submit"   [disabled]="!regForm.valid" >
                       Register
                   </button>
               </div>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import {map, mapTo} from 'rxjs/operators';
 import { pipe  } from 'rxjs';
 import { baseUrl } from 'src/environments/environment';
@@ -7,7 +7,9 @@ import { baseUrl } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
+
 
   Url = 'http://localhost:3000/posts';
 
@@ -40,20 +42,33 @@ export class ApiService {
  }))
    }
 
-
+ //Register api
    registernow(data : any){
      console.log("api called");
-    return this.http.post<any>(`${baseUrl}profile/`, data)
+   
+    return this.http.post<any>("http://localhost:3001/api/register", data)
     .pipe(map((res:any)=>{
       return res;
 
     }))
-    
+
    }
 
-
-
-
-
-
+//
+//`${baseUrl}profile/`
 }
+
+
+
+
+
+export interface TokenPayload {
+  email: string;
+  password: string;
+  name?: string;
+}
+
+
+// getToken(){
+//   return localstoreage.getItem('token')
+//   }
