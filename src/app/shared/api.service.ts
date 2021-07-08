@@ -53,22 +53,13 @@ export class ApiService {
     }))
 
    }
-
-//
-//`${baseUrl}profile/`
+   loginnow(data : any){
+   console.log("api called");
+   return this.http.post<any>("http://localhost:3001/api/logins", data)
+   .pipe(map((res:any)=>{
+     return res;
+   }))
+  }
+ 
 }
 
-
-
-
-
-export interface TokenPayload {
-  email: string;
-  password: string;
-  name?: string;
-}
-
-
-// getToken(){
-//   return localstoreage.getItem('token')
-//   }

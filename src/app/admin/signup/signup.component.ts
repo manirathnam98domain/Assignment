@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {Router} from '@angular/router';
-import { ApiService, TokenPayload} from '../../shared/api.service';
+import { ApiService} from '../../shared/api.service';
 import {Signup} from './signup.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -32,25 +32,10 @@ export class SignupComponent implements OnInit {
   birthdate: any
 
   
-
-  credentials: TokenPayload = {
-    email: '',
-    password: ''
-  };
+ 
    
 
-  //  postdata = {
-     
-  //    email:"maaa.com",
-  //       fisrtname: "mani",
-  //       lastname:"R",
-  //       address: "kalkere",
-  //       birthdate:"30/12/1998",
-  //       password:"12345",
-      
-
   
-  // }; 
    
 
   constructor(private fb: FormBuilder, private router :Router, private api : ApiService,private http : HttpClient,) { }
@@ -86,13 +71,13 @@ export class SignupComponent implements OnInit {
     this.api.registernow(this.signups)
      .subscribe(res=> {
        console.log(res);
+       
     alert("Register  Successfully");
           let ref = document.getElementById('cancel')
           ref?.click();
     this.regForm.reset();
-    this.router.navigateByUrl("admin/login");
-
-  },
+   
+    },
     err=> {
       console.log(this.err)
       alert("Something Went Wrong");

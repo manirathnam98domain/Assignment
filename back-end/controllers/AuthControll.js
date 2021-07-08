@@ -13,8 +13,8 @@ const jwt      = require('jsonwebtoken');
         }
         let user = new User({
           email: req.body.email,
-          fisrtname: req.body.fisrtname,
-          lastname: req.body.lastname,
+          fisrtName: req.body.fisrtName,
+          lastName: req.body.lastName,
           address: req.body.address,
           birthdate: req.body.birthdate,
           password: hashedPass
@@ -44,7 +44,7 @@ const jwt      = require('jsonwebtoken');
   var username = req.body.email
   var password  = req.body.password
 
-  User.findOne({$or: [{email:username},{fisrtname:username}]})
+  User.findOne({$or: [{email:username},{fisrtName:username}]})
   .then(user => {
     if(user){
       bcrypt.compare(password, user.password, function(err,result){
@@ -54,7 +54,7 @@ const jwt      = require('jsonwebtoken');
           }) 
         }
         if(result){
-          let token = jwt.sign({fisrtname: user.fisrtname}, 'verySecretValue', {expiresIn: '24h'})
+          let token = jwt.sign({fisrtName: user.fisrtName}, 'verySecretValue', {expiresIn: '24h'})
           res.json({
             message: 'Login Successflluy! ',
             token
