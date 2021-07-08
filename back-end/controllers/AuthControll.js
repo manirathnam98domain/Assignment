@@ -26,9 +26,9 @@ const jwt      = require('jsonwebtoken');
               message: 'User Added Successfully'
               })
           }) 
-         .catch(error =>{
+         .catch(error =>{ 
           res.json({
-            message: 'User Already Exists'
+            message: 'User Already Exists',
               })
           })
           .catch((err) => {

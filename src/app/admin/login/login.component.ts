@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     this.api.loginnow(this.logins)
      .subscribe(res=> {
       this.responseData = JSON.stringify(res.message) 
-       console.log(res);
+       console.log(res); 
       
        alert(this.responseData);
           let ref = document.getElementById('cancel')

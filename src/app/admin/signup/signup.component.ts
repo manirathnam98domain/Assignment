@@ -84,29 +84,12 @@ export class SignupComponent implements OnInit {
       console.log(this.err) 
       alert({ success: false, msg: "Something Went Wrong" });
    })
-
+ 
   }
 err(err: any) {
 throw new Error('Something Went Wrong');
 }
 
-
-// register(){
-
-//   let resource = JSON.stringify(this.regForm.value );
-//   console.log(resource); ((err) => {
-      
-    //})
-
-  
-
-
-//   this.api.registernow(this.postdata)
-//   .subscribe( data =>{
-//     console.log(data)
-
-//   })
-// }
 
 
 }
