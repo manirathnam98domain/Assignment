@@ -53,11 +53,19 @@
                 <br>Date of Birth is Required
             </span>
         </div>
+        
+        <div [innerHTML]="responseData"></div>
+              <script> 
+              alert(responseData);
+              </script>
               <div class="text-center">
                   <button id="submitButton" class="btn btn-primary"  type="submit"   [disabled]="!regForm.valid" >
                       Register
                   </button>
               </div>
+              
+              
+              
 
               <div class="text-success" *ngIf="successMessage">
                   {{regForm.value.email}} mailId is {{successMessage}}

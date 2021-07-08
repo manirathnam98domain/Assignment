@@ -16,6 +16,11 @@
             <input type="password" class="form-control" placeholder="Password" formControlName="password">
             <span class="text-danger" *ngIf="loginForm.controls.password.errors && loginForm.controls.password.touched"><br>Invalid Password</span>
         </div>
+        
+        <div [innerHTML]="responseData"></div>
+        <script> 
+         alert(responseData);
+        </script>
 
         <div class="text-center">
           <button id="submitButton" type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>

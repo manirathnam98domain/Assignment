@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
     logins : logins = new logins()
     email:any 
     password: any
+    responseData:any;
 
  
 
@@ -41,18 +42,22 @@ export class LoginComponent implements OnInit {
 
     this.api.loginnow(this.logins)
      .subscribe(res=> {
+      this.responseData = JSON.stringify(res.message) 
        console.log(res);
-    alert("Login  Successfully");
+      
+       alert(this.responseData);
           let ref = document.getElementById('cancel')
           ref?.click();
-    this.loginForm.reset();
+       this.loginForm.reset();
     this.router.navigateByUrl("employee");
 
+    
      },
      err=> {
       console.log(this.err)
       alert("Something Went Wrong");
    })
+   
     
     // alert(this.successMessage="Successfully Loggined In...");
     // console.log(this.successMessage);

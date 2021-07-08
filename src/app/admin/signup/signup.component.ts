@@ -31,6 +31,8 @@ export class SignupComponent implements OnInit {
   address: any
   birthdate: any
 
+  responseData:any
+
   
  
    
@@ -70,17 +72,17 @@ export class SignupComponent implements OnInit {
 
     this.api.registernow(this.signups)
      .subscribe(res=> {
-       console.log(res);
+      this.responseData = JSON.stringify(res.message) 
+       console.log(this.responseData);
        
-    alert("Register  Successfully");
-          let ref = document.getElementById('cancel')
-          ref?.click();
-    this.regForm.reset();
-   
-    },
-    err=> {
-      console.log(this.err)
-      alert("Something Went Wrong");
+        alert(this.responseData);
+        let ref = document.getElementById('cancel')
+        ref?.click();
+        this.regForm.reset();
+        
+     },err=> {
+      console.log(this.err) 
+      alert({ success: false, msg: "Something Went Wrong" });
    })
 
   }
@@ -92,7 +94,9 @@ throw new Error('Something Went Wrong');
 // register(){
 
 //   let resource = JSON.stringify(this.regForm.value );
-//   console.log(resource);
+//   console.log(resource); ((err) => {
+      
+    //})
 
   
 

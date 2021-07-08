@@ -5,29 +5,29 @@ const userSchema   = new Schema({
 
 
   email:{
-    type: String,
+    type: String, 
     unique: true,
     required: true
   },
 
   fisrtName :{
-    type: String
+    type: String,
   },
 
   lastName :{
-      type: String
+      type: String,
    },
     address :{
-      type: String
+      type: String,
     },
     birthdate :{
-      type: String
+      type: String,
     },
     password: {
-      type:String
+      type:String,
     }
 
-},{timestamps: true})
+})
 
 const User = mongoose.model('User', userSchema);
 

@@ -25,11 +25,14 @@ const jwt      = require('jsonwebtoken');
             res.json({
               message: 'User Added Successfully'
               })
-          })
-        .catch(error =>{
+          }) 
+         .catch(error =>{
           res.json({
-            message: 'An Error Occured!'
+            message: 'User Already Exists'
               })
+          })
+          .catch((err) => {
+            res.status(400).json({ success: false, msg: "can't find user" });
           })
           .catch((err) => {
             console.log(err);
@@ -38,6 +41,11 @@ const jwt      = require('jsonwebtoken');
       })
   }
 
+  // else {
+  //   res.json({
+  //     message:'',
+
+  //   })
 
 
  const login = (req, res)=>{
@@ -52,6 +60,7 @@ const jwt      = require('jsonwebtoken');
           res.json({
             error:err
           }) 
+        
         }
         if(result){
           let token = jwt.sign({fisrtName: user.fisrtName}, 'verySecretValue', {expiresIn: '24h'})
