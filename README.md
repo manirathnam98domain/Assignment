@@ -35,6 +35,12 @@ json-server --watch db.json
 
 Now if you go to http://localhost:3000/posts/1, you'll get
 
+# Install Backend 
+move to the backend folder then intsall .
+ Npm packages
+ `npm install`  
+ `nodemon`
+
  # Application Flow
  
  1) Register
