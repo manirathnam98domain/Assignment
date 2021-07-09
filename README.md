@@ -17,6 +17,7 @@ https://github.com/manirathnam98domain/Assignment.git
 
 # Install
  Npm packages
+ 
  `npm install`
   Next run  
  `ng serve`  
@@ -26,7 +27,7 @@ Might need to run
 npm audit fix
 
 # Install Backend 
-move to the backend folder then intsall .
+move to the `/backend` folder then intsall .
  Npm packages
  `npm install`  
  `nodemon`
